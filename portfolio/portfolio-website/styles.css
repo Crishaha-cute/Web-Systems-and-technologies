@@ -208,6 +208,7 @@ nav {
     font-size: 1.5rem; 
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
@@ -350,6 +351,7 @@ nav {
 
 .highlight {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -452,6 +454,7 @@ nav {
 .skill-card i {
     font-size: 3.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
@@ -519,6 +522,7 @@ nav {
 .contact-item i {
     font-size: 2.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
@@ -681,6 +685,7 @@ button:focus-visible,
     margin: 4rem 0;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
@@ -729,6 +734,7 @@ button:focus-visible,
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.25rem;
@@ -770,6 +776,7 @@ button:focus-visible,
 .interest-card i {
     font-size: 3rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.25rem;
@@ -835,6 +842,7 @@ button:focus-visible,
 .timeline-date {
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 15px;

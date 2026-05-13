@@ -210,4 +210,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 certificateModal.classList.remove('active');
             }
         });
+
+        // See More Works
+        const seeMoreBtn = document.getElementById('see-more-btn');
+        if (seeMoreBtn) {
+            seeMoreBtn.addEventListener('click', function() {
+                const hiddenProjects = document.querySelectorAll('.project-card.hidden-project');
+                hiddenProjects.forEach(project => {
+                    project.style.display = 'block';
+                    // Optional: Add a fade-in animation
+                    setTimeout(() => {
+                        project.style.opacity = 1;
+                        project.style.transform = 'scale(1)';
+                    }, 10);
+                });
+                
+                // Hide the button after showing all projects
+                seeMoreBtn.style.display = 'none';
+            });
+        }
 });
