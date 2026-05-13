@@ -210,4 +210,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 certificateModal.classList.remove('active');
             }
         });
+
+        // Show More Works functionality
+        const showMoreBtn = document.getElementById('show-more-btn');
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', function() {
+                const hiddenWorks = document.querySelectorAll('.project-card.hidden-work');
+                let delay = 0;
+                
+                hiddenWorks.forEach(work => {
+                    setTimeout(() => {
+                        work.classList.add('show');
+                    }, delay);
+                    delay += 100; // Stagger animation
+                });
+                
+                // Hide button with smooth transition
+                showMoreBtn.style.opacity = '0';
+                showMoreBtn.style.pointerEvents = 'none';
+                showMoreBtn.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => {
+                    showMoreBtn.style.display = 'none';
+                }, 300);
+            });
+        }
 });
