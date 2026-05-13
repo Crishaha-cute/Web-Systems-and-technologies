@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     showMoreBtn.style.display = 'none';
                     showLessBtn.style.display = 'inline-flex';
+                    showLessBtn.style.pointerEvents = 'auto';
                     showLessBtn.style.opacity = '0';
                     setTimeout(() => {
                         showLessBtn.style.opacity = '1';
@@ -265,6 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     shownWorks.forEach(work => {
                         work.classList.remove('show');
                         work.style.opacity = '1';
+                        work.style.transition = 'opacity 0.3s ease';
                     });
                     showLessBtn.style.display = 'none';
                     showMoreBtn.style.display = 'inline-flex';
