@@ -213,6 +213,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show More Works functionality
         const showMoreBtn = document.getElementById('show-more-btn');
+        const showLessBtn = document.getElementById('show-less-btn');
+        
         if (showMoreBtn) {
             showMoreBtn.addEventListener('click', function() {
                 const hiddenWorks = document.querySelectorAll('.project-card.hidden-work');
@@ -225,12 +227,53 @@ document.addEventListener('DOMContentLoaded', function() {
                     delay += 100; // Stagger animation
                 });
                 
-                // Hide button with smooth transition
+                // Hide Show More button with smooth transition
                 showMoreBtn.style.opacity = '0';
                 showMoreBtn.style.pointerEvents = 'none';
                 showMoreBtn.style.transition = 'opacity 0.3s ease';
+                
+                // Show Show Less button
                 setTimeout(() => {
                     showMoreBtn.style.display = 'none';
+                    showLessBtn.style.display = 'inline-flex';
+                    showLessBtn.style.opacity = '0';
+                    setTimeout(() => {
+                        showLessBtn.style.opacity = '1';
+                        showLessBtn.style.transition = 'opacity 0.3s ease';
+                    }, 10);
+                }, 300);
+            });
+        }
+        
+        if (showLessBtn) {
+            showLessBtn.addEventListener('click', function() {
+                const shownWorks = document.querySelectorAll('.project-card.hidden-work.show');
+                
+                // Hide shown works with fade out
+                shownWorks.forEach(work => {
+                    work.style.opacity = '0';
+                    work.style.transition = 'opacity 0.3s ease';
+                });
+                
+                // Hide Show Less button
+                showLessBtn.style.opacity = '0';
+                showLessBtn.style.pointerEvents = 'none';
+                showLessBtn.style.transition = 'opacity 0.3s ease';
+                
+                // Show Show More button and remove show class
+                setTimeout(() => {
+                    shownWorks.forEach(work => {
+                        work.classList.remove('show');
+                        work.style.opacity = '1';
+                    });
+                    showLessBtn.style.display = 'none';
+                    showMoreBtn.style.display = 'inline-flex';
+                    showMoreBtn.style.opacity = '0';
+                    showMoreBtn.style.pointerEvents = 'auto';
+                    setTimeout(() => {
+                        showMoreBtn.style.opacity = '1';
+                        showMoreBtn.style.transition = 'opacity 0.3s ease';
+                    }, 10);
                 }, 300);
             });
         }

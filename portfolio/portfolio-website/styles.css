@@ -1117,6 +1117,11 @@ button:focus-visible,
     justify-content: center;
     margin-top: 4rem;
     padding: 2rem 0;
+    gap: 1rem;
+}
+
+.show-more-btn, .show-less-btn {
+    transition: all 0.3s ease;
 }
 
 .project-info {
